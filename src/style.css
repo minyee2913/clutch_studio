@@ -1,0 +1,32 @@
+@font-face {
+    font-family: "minecraft-ten";
+    font-weight: normal;
+    src: url("../resources/fonts/minecraftTen.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "unifont";
+    font-weight: normal;
+    src: url("../resources/fonts/unifont.ttf") format("truetype");
+}
+
+body {
+    font-family: unifont;
+    margin: 0px;
+    padding: 0px;
+
+    background-color: #242424;
+
+    overflow: hidden;
+}
+
+.prevent-drag {
+    user-select: none !important;
+    -webkit-user-select: none !important; 
+    -moz-user-select: -moz-none !important;
+    -ms-user-select: none !important;
+}
+
+.clickable {
+    cursor: pointer;
+}
