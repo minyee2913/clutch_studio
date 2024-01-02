@@ -1,6 +1,8 @@
 import Editor, { useMonaco } from '@monaco-editor/react'
 import { useEffect } from 'react';
 
+export let SetEditor = (text: string) => {};
+
 const CodeEditor = () => {
 	const monaco = useMonaco();
 
@@ -8,6 +10,10 @@ const CodeEditor = () => {
 		if (!monaco) return;
 
 		monaco.editor.setTheme("vs-dark");
+
+		SetEditor = (text)=>{
+			monaco?.editor.getModels()[0].setValue(text);
+		}
 
 		monaco.languages.json.jsonDefaults.setDiagnosticsOptions({
 			allowComments: true,
